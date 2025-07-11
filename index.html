@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ishrath Mufaiza - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin-left: 15px;
+    }
+
+    /* Header */
+    #header {
+  height: 100vh;
+  background-image: url('profile_bg.avif'); 
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+    #header h1 {
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    #header p {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    /* About Section */
+    #about {
+      background-color: #ffffff;
+    }
+    #about img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 50%;
+      border: 5px solid #343a40;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Skills */
+    .skill-card h4 {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .progress {
+      height: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      transition: width 1s ease-in-out;
+    }
+    .progress-bar:hover {
+      filter: brightness(110%);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #343a40;
+      color: white;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white fw-bold" href="#">Ishrath</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<section id="header">
+  <div class="container">
+    <h1 class="display-4">Hi, I'm Ishrath Mufaiza</h1>
+    <p class="lead">Passionate about clean code, modern tech, and creative solutions</p>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About Me</h2>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="IMG-20220704-WA0004.jpg" alt="Profile Image">
+      </div>
+      <div class="col-md-6">
+        <p>
+          I'm a passionate web developer skilled in HTML, CSS, JavaScript, PHP, and Bootstrap.
+          I enjoy creating clean and efficient code. When I'm not coding, I explore new technologies and contribute to open-source.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Projects</h2>
+    <div class="row justify-content-center">
+      <!-- Description Column -->
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Student Portal System</h5>
+            <p class="card-text">
+              <span id="shortDesc">
+                A complete student portal built using PHP and MySQL for the backend, and HTML, CSS, Bootstrap for the frontend. It allows students to register with full details, log in, view and edit their profile, and receive admin notices.
+              </span>
+              <span id="fullDesc" style="display: none;">
+                &nbsp;On the homepage, users can register with personal, academic, family, and payment details. Login is secured using first name and DOB. Upon logging in, students access a personalized dashboard with profile controls and a real-time notice board. Admin functionality is protected: only the portal owner can register admins using a secret key. Admins log in using email and password to access their dashboard where they can view student and admin records, and manage notices with status controls (activate/deactivate). The system also includes dynamic navigation bars showing user/admin names and profile images, enhancing personalization and user experience.
+              </span>
+            </p>
+            <a href="javascript:void(0);" id="readMoreBtn" onclick="toggleDescription()">Read more</a>
+          </div>
+        </div>
+      </div>
+
+<!-- Image Column -->
+ <div class="col-md-6 text-center">
+<img src="Homepage.png" class="img-fluid rounded shadow" alt="Student Portal Homepage"><br>
+<a href="https://drive.google.com/drive/folders/1qQxiuit_W1rJFkGGAV21jJVv5_l6bGi3?usp=drive_link">Click here to view video about the projects</a>
+</div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Skills -->
+<section id="skills" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-3">
+        <div class="skill-card">
+          <h4>HTML & CSS</h4>
+          <div class="progress">
+            <div class="progress-bar bg-primary" style="width: 90%">90%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="skill-card">
+          <h4>JavaScript</h4>
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width: 80%">80%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="skill-card">
+          <h4>PHP</h4>
+          <div class="progress">
+            <div class="progress-bar bg-warning text-dark" style="width: 85%">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="skill-card">
+          <h4>MySQL</h4>
+          <div class="progress">
+            <div class="progress-bar bg-danger" style="width: 75%">75%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5 text-center">
+  <div class="container">
+    <h2 class="mb-4">Get in Touch</h2>
+    <p>Email: <a href="mailto:ishrathmufaiza24@gmail.com">ishrathmufaiza24@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Ishrath2224" target="_blank">github.com/Ishrath2224</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ishrath-mufaiza-583366320" target="_blank">linkedin.com/in/ishrath-mufaiza</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-3 text-center">
+  <p>&copy; 2025 Ishrath Mufaiza. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function toggleDescription() {
+    const shortDesc = document.getElementById('shortDesc');
+    const fullDesc = document.getElementById('fullDesc');
+    const btn = document.getElementById('readMoreBtn');
+
+    if (fullDesc.style.display === "none") {
+      fullDesc.style.display = "inline";
+      btn.textContent = "Read less";
+    } else {
+      fullDesc.style.display = "none";
+      btn.textContent = "Read more";
+    }
+  }
+</script>
+
+
+</body>
+</html>
